@@ -33,6 +33,21 @@ php artisan serve
 ***
 ### blog
 
+https://knaka0209.hatenablog.com/entry/lara58_27bbs
 
 ***
+### UI
+
+* bbs/show , reply input etc
+![ img-1 ](https://raw.githubusercontent.com/kuc-arc-f/screen-img/master/web/bbs/ss-bbs-show.png)
+
+* bbs / index
+![ img-1 ](https://raw.githubusercontent.com/kuc-arc-f/screen-img/master/web/bbs/ss-bbs-index.png)
+
+* message/index, new BBS reply receive message and  notification API display
+![ img-1 ](https://raw.githubusercontent.com/kuc-arc-f/screen-img/master/web/bbs/ss-bbs-msg-0525b.png)
+
+***
+
+
 
