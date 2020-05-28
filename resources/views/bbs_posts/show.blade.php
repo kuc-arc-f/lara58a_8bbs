@@ -12,6 +12,7 @@
 		<p>
 			Date :  {{ $bbs_post->created_at }} <br />
 			ID : {{ $bbs_post->id }} <br />
+			from : {{ $user->name }} <br />
 		</p>
 	</div>
 	<div class="panel-body">
@@ -21,7 +22,7 @@
 			</div>
 		</div>
 		<hr />
-		<h3 style="color: green; ">このスレッドへ返信する:</h3>
+		<h3 style="color: green; ">このスレッドへ返信する :</h3>
 		<!--  返信を追加: -->
 		{!! Form::model($bbs_post, [
 			'route' => 'bbs_answers.store', 'method' => 'post', 'class' => 'form-horizontal'
@@ -45,7 +46,12 @@
 	</div>
 	<div class="panel-footer">
 		<hr />
-		<h3 style="color: green; ">返信の一覧:</h3>
+		<h3 style="color: green; ">返信の一覧 :</h3>
+		<?php // var_dump(count($bbs_answers)); ?>
+		<?php $n = count($bbs_answers); 
+		if($n < 1){ ?>
+			<p style="color : red;"> nothing, Replay post </p>
+		<?php } ?>
 		<table class="table table-striped bbs-table">
 		<tbody>
 			@foreach ($bbs_answers as $answer )

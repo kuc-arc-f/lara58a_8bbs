@@ -12,9 +12,11 @@
 				{{ link_to_route('bbs.create', 'Create' ,null, ['class' => 'btn btn-primary']) }}
 			</div>
 			<div class="col-sm-4" style="text-align: right;">
-				<a href="#" class="btn btn-sm btn-outline-primary serach_display_btn mb-0">
-					<i class="fas fa-arrow-down"></i>&nbsp;Search
-				</a>				
+				<?php if((int)$display_mode == 1){ ?>
+					<a href="#" class="btn btn-sm btn-outline-primary serach_display_btn mb-0">
+						<i class="fas fa-arrow-down"></i>&nbsp;Search
+					</a>				
+				<?php } ?>
 			</div>
 		</div>
 	</div>
@@ -38,18 +40,37 @@
 				!!}   
 			</div>
 			<div class="col-sm-8">
-				{!! Form::submit('検索', ['class' => 'btn btn-outline-primary btn-sm serach_button']) !!}
+				{!! Form::submit('Search', ['class' => 'btn btn-outline-primary btn-sm serach_button']) !!}
 			</div>
 		</div>
 	</div>
-    {!! Form::close() !!}
-
+	{!! Form::close() !!}
+	<!-- tab -->
+    <ul class="nav nav-tabs">
+        <?php
+            $mode_all_active = "";
+            $mode_user_active = "";
+            if((int)$display_mode == 2){
+                $mode_user_active = " active";
+            }else{
+                $mode_all_active = " active";
+            }
+        ?>
+        <li class="nav-item">
+            <a href="/bbs?mode=1" class="nav-link <?= $mode_all_active ?>"
+                 id="not_complete_tab">
+                ALL
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="/bbs?mode=2" class="nav-link <?= $mode_user_active ?>"
+                 id="complete_tab">
+                YourPost
+            </a>
+        </li>
+    </ul>
 	<div class="panel-body">
 		<table class="table table-striped bbs-table">
-			<thead>
-				<th>post</th>
-			</thead>
-			<?php //debug_dump($tasks); ?>
 			<tbody>
 				@foreach ($bbs_posts as $post )
 					<tr>
@@ -57,14 +78,19 @@
 							<p class="p_tbl_task_name mb-0">
 								{{ link_to_route('bbs.show', $post->title, $post->id) }}
 							</p>
-							<?= $post->created_at ?>, ID: <?= $post->id ?>
-							<!--
-							<a href="/bbs/<?= $post->id ?>/edit"
-								class="a_edit_link" 
-								data-toggle="tooltip" title="編集します">
-								<i class="far fa-edit"></i>
-							</a>
-							-->
+							<?php if($post->display == 0 ){ ?>
+								<span class="badge badge-secondary" style="font-size: 1.2rem;">非表示
+								</span>
+							<?php } ?>
+							<?= $post->created_at ?>, <?= $post->user_name ?> ,ID: <?= $post->id ?>
+							<?php if((int)$display_mode == 2){ ?>
+								&nbsp;&nbsp;
+								<a href="/bbs/<?= $post->id ?>/edit"
+									class="a_edit_link" 
+									data-toggle="tooltip" title="編集します">
+									<i class="far fa-edit"></i>
+								</a>
+							<?php } ?>
 						</td>
 					</tr>
 				@endforeach

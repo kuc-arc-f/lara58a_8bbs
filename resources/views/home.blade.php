@@ -22,16 +22,10 @@
 	<!-- btn -->
 	<div class="button_area_wrap mt-4" style="text-align: center;">
 		<div class="form-group">
-			<a href="/chats" class="btn btn-outline-primary" >Chats</a>
-		</div>
-		<div class="form-group">
 			<a href="/messages" class="btn btn-outline-primary" >Messages</a>
 		</div>		
 		<div class="form-group">
-			<a href="/plans" class="btn btn-outline-primary" >Plans</a>
-		</div>
-		<div class="form-group">
-			<a href="/todos" class="btn btn-outline-primary" >Todos</a>
+			<a href="/bbs" class="btn btn-outline-primary" >BBS</a>
 		</div>
 		<!-- -->
 		<div class="develop_box mt-0">

@@ -37,6 +37,7 @@ class BbsAnswersController extends Controller
 		$bbs_answer->save();
 		// Message
 		$this->send_message($inputs );
+		session()->flash('flash_message', 'Completed, Reply save');
 
 		return redirect()->route('bbs.index');
 	}	
@@ -48,7 +49,7 @@ class BbsAnswersController extends Controller
 		$bbs_post = BbsPost::find($data["bbs_post_id"] );
 		$to_id = $bbs_post->user_id;
 		//body
-		$body = "BBCに返信された新着の通知を、メッセージに通知しています。" . "\r\n". "以下、返信内容となります。" . "\r\n";
+		$body = "BBCに返信された新着通知を、システムから自動送信しています。" . "\r\n". "以下、返信内容となります。" . "\r\n";
 		$body = $body . "==================================================" . "\r\n";
 		//from_user
 		$BBS_ADMIN_MAIL = env('BBS_ADMIN_MAIL', '');

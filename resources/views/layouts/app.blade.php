@@ -36,31 +36,6 @@
 		</button>
 		<div class="collapse navbar-collapse" id="navbarNav">
 			<ul class="navbar-nav  mr-auto">
-				<li class="nav-item dropdown">
-					<a href="#" class="nav-link dropdown-toggle" role="button" data-toggle="dropdown"
-					id="navbarDropdownMenuLink" aria-haspopup="true" aria-expanded="false">develop</a>
-					<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-						<a class="dropdown-item" href="/tasks">Task</a>
-						<a class="dropdown-item" href="/mdats">mDats</a>
-						<a class="dropdown-item" href="/books">Book</a>
-						<a class="dropdown-item" href="/depts">Depts</a>
-						<a class="dropdown-item" href="/members">Members</a>
-						<!--
-							横仕切り線
-						<div class="dropdown-divider"></div>
-						-->
-					</div><!-- ./dropdown-menu -->
-				</li>                
-				<li class="nav-item dropdown">
-					<a href="#" class="nav-link dropdown-toggle" role="button" data-toggle="dropdown"
-					id="navbarDropdownMenuLink" aria-haspopup="true" aria-expanded="false">Vue</a>
-					<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-						<a class="dropdown-item" href="/vue_tasks">VueTasks</a>
-						<a class="dropdown-item" href="/vue_todos">VueTodos</a>
-						<a class="dropdown-item" href="/vue_books">VueBooks</a>
-						<a class="dropdown-item" href="/vue_sort_items">VueSortItems</a>
-					</div><!-- ./dropdown-menu -->
-				</li>
 				<li class="nav-item active">
 					<a class="nav-link" href="/bbs">BBS </a>
 				</li>                
@@ -74,15 +49,6 @@
 						-->
 					</a>
 				</li>				
-				<li class="nav-item active">
-					<a class="nav-link" href="/chats">Chats</a>
-				</li>                  
-				<li class="nav-item active">
-					<a class="nav-link" href="/todos">Todos</a>
-				</li>  
-				<li class="nav-item active">
-					<a class="nav-link" href="/plans">Plans</a>
-				</li>                              
 			</ul>
 			<!-- right_nav -->
 			<ul class="navbar-nav">
