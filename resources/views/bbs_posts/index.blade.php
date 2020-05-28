@@ -102,8 +102,8 @@
 		<hr />
 		@include('element.page_info',
 		[
-			'git_url' => ' ',
-			'blog_url' => ' '
+			'git_url' => 'https://github.com/kuc-arc-f/lara58a_8bbs',
+			'blog_url' => 'https://knaka0209.hatenablog.com/entry/lara58_27bbs'
 		])        
 	</div>
 </div>
