@@ -6,6 +6,8 @@
 
  date    : 2020/05/28
 
+ update : 2020/05/30
+
 ***
 
 Laravel 5.8 + mysql , bbs app sample
@@ -34,6 +36,10 @@ php artisan serve
 ### blog
 
 https://knaka0209.hatenablog.com/entry/lara58_27bbs
+
+* chat設定ですが、参考の .env 設定
+
+https://knaka0209.hatenablog.com/entry/lara58_25chat
 
 ***
 ### UI
